@@ -66,11 +66,11 @@ h2 {
     letter-spacing: var(--spacing);
     text-transform: capitalize;
     line-height: 1.25;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -150,7 +150,7 @@ a {
 
 .inicio h1 {
     text-transform: uppercase;
-    padding: 0 3rem;
+    padding: 4rem;
 }
 
 .inicio-ul {
@@ -169,7 +169,7 @@ a:visited{
 
 @media screen and (min-width: 600px) {
     .inicio {
-        background: linear-gradient(rgb(44, 174, 186, 0.8), rgba(0, 0, 0, 0.7)),
+        background: linear-gradient(rgb(44, 174, 186, 0.9), rgba(0, 0, 0, 0.8)),
             url("../images/kittyNvim.png") top/cover no-repeat;
     }
 }
@@ -201,8 +201,7 @@ a:visited{
 
 
 .footer p{
-    background: var(--clr-grey-1);
     text-align: center;
-    padding: 4rem;
-    color: var(--clr-white);
+    padding: 2rem;
+    color: var(--clr-grey-1);
 }

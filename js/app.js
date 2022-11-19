@@ -207,7 +207,7 @@ function urlCheck() {
         document.getElementById("contentResult").innerHTML =
             data.target.response;
         document.getElementById("stateResult").innerHTML =
-            data.target.status + "-" +data.target.statusText;
+            data.target.status + "-" + data.target.statusText;
 
         document.getElementById("headResult").innerHTML =
             xhr.getAllResponseHeaders();
