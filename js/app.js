@@ -201,3 +201,9 @@ function checkVowelsSum(value) {
 
     return "Contiene las vocales: " + vowelsResult;
 }
+
+function urlCheck() {
+
+    let checkUserText = window.location.pathname;
+    document.getElementById("urlResult").innerHTML = checkUserText;
+}
