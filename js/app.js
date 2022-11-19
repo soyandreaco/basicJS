@@ -102,7 +102,6 @@ function checkVowels(value) {
     }
     if (eCount > 0) {
         vowelsResult += "e";
-
     }
     if (iCount > 0) {
         vowelsResult += "i";
@@ -116,8 +115,6 @@ function checkVowels(value) {
 
     return "Contiene las vocales: " + vowelsResult;
 }
-
-
 
 function vowelsSum() {
     // take input
@@ -186,14 +183,12 @@ function checkVowelsSum(value) {
     }
     if (eCount > 0) {
         vowelsResult += " - e:" + eCount;
-
     }
     if (iCount > 0) {
         vowelsResult += " - i:" + iCount;
     }
     if (oCount > 0) {
         vowelsResult += " - o:" + oCount;
-
     }
     if (uCount > 0) {
         vowelsResult += " - u:" + uCount;
@@ -203,7 +198,45 @@ function checkVowelsSum(value) {
 }
 
 function urlCheck() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://soyandreaco.github.io/basicJS/README.md", true);
+    xhr.addEventListener("load", (data) => {
+        console.log(data);
+        document.getElementById("urlResult").innerHTML =
+            data.target.responseURL;
+        document.getElementById("contentResult").innerHTML =
+            data.target.response;
+        document.getElementById("stateResult").innerHTML =
+            data.target.status + "-" +data.target.statusText;
 
-    let checkUserText = window.location.pathname;
-    document.getElementById("urlResult").innerHTML = checkUserText;
+        document.getElementById("headResult").innerHTML =
+            xhr.getAllResponseHeaders();
+    });
+    xhr.send();
+}
+
+function contentCheck() {
+    const xhr = new XMLHttpRequest();
+    console.log(xhr);
+    document.getElementById("contentResult").innerHTML = xhr;
+}
+
+function headCheck() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+        document.getElementById("headResult").innerHTML =
+            this.getAllResponseHeaders();
+    };
+    xhttp.open("GET", "../images/kittyNvim.png");
+    xhttp.send();
+}
+
+function stateCheck() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        document.getElementById("stateResult").innerHTML =
+            this.getAllResponseHeaders();
+    };
+    xhttp.open("GET", "../images/kittyNvim.png");
+    xhttp.send();
 }

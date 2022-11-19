@@ -31,49 +31,29 @@
             <section id="ajax">
                 <div class="ajax">
                     <h1>Ajax</h1>
-                    <ol>
+                    <h4>Obtener información de la página con ajax</h4>
+                    <button type="button" onclick="urlCheck()">
+                        Obtener datos
+                    </button>
+                    <ul>
                         <div>
                             <li>Url de la página:</li>
-                            <button type="button" onclick="urlCheck()">
-                                Obtener URL
-                            </button>
-                            <p>Resultado:</p>
-                            <label id="urlResult"></label>
+                            <p id="urlResult"></p>
                         </div>
 
                         <div>
-                            <li>Contenido:</li>
-                            <button type="button" onclick="contentCheck()">
-                                Obtener
-                            </button>
-                            <p>Resultado:</p>
-                            <label id="contentResult"></label>
+                            <li>Contenido del archivo README.md:</li>
+                            <p id="contentResult"></p>
                         </div>
                         <div>
-                            <li>Estados:</li>
-                            <button type="button" onclick="stateCheck()">
-                                Obtener
-                            </button>
-                            <p>Resultado:</p>
-                            <label id="stateResult"></label>
+                            <li>Código y Estado:</li>
+                            <p id="stateResult"></p>
                         </div>
                         <div>
                             <li>Cabeceras:</li>
-                            <button type="button" onclick="headCheck()">
-                                Obtener
-                            </button>
-                            <p>Resultado:</p>
-                            <label id="headResult"></label>
+                            <p id="headResult"></p>
                         </div>
-                        <div>
-                            <li>Código estado:</li>
-                            <button type="button" onclick="codeCheck()">
-                                Obtener
-                            </button>
-                            <p>Resultado:</p>
-                            <label id="codeResult"></label>
-                        </div>
-                    </ol>
+                   </ul>
                 </div>
             </section>
         </main>
