@@ -45,22 +45,21 @@ function vowels() {
 }
 
 function checkVowels(value) {
-    // check palindrome
     let len = value.length;
-    let aCount,
-        eCount,
-        iCount,
-        oCount,
-        uCount = 0;
+    let aCount = 0;
+    let eCount = 0;
+    let iCount = 0;
+    let oCount = 0;
+    let uCount = 0;
 
     let vowelsResult = "";
 
-    for (let i = 0; i < len / 2; i++) {
+    for (let i = 0; i < len; i++) {
         if (
-            value.charAt(i) == "a" ||
-            value.charAt(i) == "A" ||
-            value.charAt(i) == "á" ||
-            value.charAt(i) == "Á"
+            value[i] == "a" ||
+            value[i] == "A" ||
+            value[i] == "á" ||
+            value[i] == "Á"
         ) {
             aCount += 1;
         }
@@ -97,11 +96,13 @@ function checkVowels(value) {
             uCount += 1;
         }
     }
+
     if (aCount > 0) {
-        vowelsResult = vowelsResult + "a";
+        vowelsResult += "a";
     }
     if (eCount > 0) {
-        vowelsResult = vowelsResult + "e";
+        vowelsResult += "e";
+
     }
     if (iCount > 0) {
         vowelsResult += "i";
@@ -110,7 +111,92 @@ function checkVowels(value) {
         vowelsResult += "o";
     }
     if (uCount > 0) {
-        vowelsResult = "u";
+        vowelsResult += "u";
+    }
+
+    return "Contiene las vocales: " + vowelsResult;
+}
+
+
+
+function vowelsSum() {
+    // take input
+    let userText = document.getElementById("vowelsTextTwo").value;
+
+    let checkUserText = checkVowelsSum(userText);
+
+    document.getElementById("vowelsSumResult").innerHTML = checkUserText;
+}
+
+function checkVowelsSum(value) {
+    let len = value.length;
+    let aCount = 0;
+    let eCount = 0;
+    let iCount = 0;
+    let oCount = 0;
+    let uCount = 0;
+
+    let vowelsResult = "";
+
+    for (let i = 0; i < len; i++) {
+        if (
+            value[i] == "a" ||
+            value[i] == "A" ||
+            value[i] == "á" ||
+            value[i] == "Á"
+        ) {
+            aCount += 1;
+        }
+        if (
+            value.charAt(i) == "e" ||
+            value.charAt(i) == "E" ||
+            value.charAt(i) == "é" ||
+            value.charAt(i) == "É"
+        ) {
+            eCount += 1;
+        }
+        if (
+            value.charAt(i) == "i" ||
+            value.charAt(i) == "I" ||
+            value.charAt(i) == "í" ||
+            value.charAt(i) == "Í"
+        ) {
+            iCount += 1;
+        }
+        if (
+            value.charAt(i) == "o" ||
+            value.charAt(i) == "O" ||
+            value.charAt(i) == "ó" ||
+            value.charAt(i) == "Ó"
+        ) {
+            oCount += 1;
+        }
+        if (
+            value.charAt(i) == "u" ||
+            value.charAt(i) == "U" ||
+            value.charAt(i) == "ú" ||
+            value.charAt(i) == "Ú"
+        ) {
+            uCount += 1;
+        }
+    }
+
+    if (aCount > 0) {
+        vowelsResult += "a:" + aCount;
+    }
+    if (eCount > 0) {
+        vowelsResult += " - e:" + eCount;
+
+    }
+    if (iCount > 0) {
+        vowelsResult += " - i:" + iCount;
+    }
+    if (oCount > 0) {
+        vowelsResult += " - o:" + oCount;
+
+    }
+    if (uCount > 0) {
+        vowelsResult += " - u:" + uCount;
     }
 
     return "Contiene las vocales: " + vowelsResult;
