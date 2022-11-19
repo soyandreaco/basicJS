@@ -34,3 +34,84 @@ function checkMaxValue(numOne, numTwo) {
     }
     return "El valor mayor es: " + numOne;
 }
+
+function vowels() {
+    // take input
+    let userText = document.getElementById("vowelsText").value;
+
+    let checkUserText = checkVowels(userText);
+
+    document.getElementById("vowelsResult").innerHTML = checkUserText;
+}
+
+function checkVowels(value) {
+    // check palindrome
+    let len = value.length;
+    let aCount,
+        eCount,
+        iCount,
+        oCount,
+        uCount = 0;
+
+    let vowelsResult = "";
+
+    for (let i = 0; i < len / 2; i++) {
+        if (
+            value.charAt(i) == "a" ||
+            value.charAt(i) == "A" ||
+            value.charAt(i) == "á" ||
+            value.charAt(i) == "Á"
+        ) {
+            aCount += 1;
+        }
+        if (
+            value.charAt(i) == "e" ||
+            value.charAt(i) == "E" ||
+            value.charAt(i) == "é" ||
+            value.charAt(i) == "É"
+        ) {
+            eCount += 1;
+        }
+        if (
+            value.charAt(i) == "i" ||
+            value.charAt(i) == "I" ||
+            value.charAt(i) == "í" ||
+            value.charAt(i) == "Í"
+        ) {
+            iCount += 1;
+        }
+        if (
+            value.charAt(i) == "o" ||
+            value.charAt(i) == "O" ||
+            value.charAt(i) == "ó" ||
+            value.charAt(i) == "Ó"
+        ) {
+            oCount += 1;
+        }
+        if (
+            value.charAt(i) == "u" ||
+            value.charAt(i) == "U" ||
+            value.charAt(i) == "ú" ||
+            value.charAt(i) == "Ú"
+        ) {
+            uCount += 1;
+        }
+    }
+    if (aCount > 0) {
+        vowelsResult = vowelsResult + "a";
+    }
+    if (eCount > 0) {
+        vowelsResult = vowelsResult + "e";
+    }
+    if (iCount > 0) {
+        vowelsResult += "i";
+    }
+    if (oCount > 0) {
+        vowelsResult += "o";
+    }
+    if (uCount > 0) {
+        vowelsResult = "u";
+    }
+
+    return "Contiene las vocales: " + vowelsResult;
+}
