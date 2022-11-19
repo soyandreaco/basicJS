@@ -1,5 +1,4 @@
- {
-}
+ 
 /* ==== Fonts ==== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
@@ -71,7 +70,7 @@ h2 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h2 {
@@ -83,16 +82,21 @@ h3 {
 }
 
 p {
-    margin-bottom: 1.25rem;
-    color: var(--clr-primary-1);
+    margin-bottom: 0.75rem;
+    color: var(--clr-grey-9);
 }
 ul {
     list-style-type: none;
 }
 
+ol {
+    font-size: 1rem;
+};
+
 a {
     text-decoration: none;
 }
+
 
 .navbar {
     background: var(--clr-white);

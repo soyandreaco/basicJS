@@ -31,6 +31,65 @@
             <section id="js">
                 <div class="js">
                     <h1>JavaScript</h1>
+                    <ol>
+                        <div>
+                            <li>Validar si una cadena es palíndrome:</li>
+                            <form>
+                                <input
+                                    type="text"
+                                    name="Text"
+                                    placeholder="Digite la cadena a evaluar"
+                                    id="palindromeText"
+                                />
+                                <button type="button" onclick="palindrome()">
+                                    Validar
+                                </button>
+                                <p>Resultado:</p>
+                            </form>
+                            <label id="palindromeResult"></label>
+                        </div>
+
+                        <div>
+                            <li>Cual es el número mayor:</li>
+                            <form>
+                                <input
+                                    type="text"
+                                    name="Number"
+                                    placeholder="Digite el primer valor"
+                                    id="numberOne"
+                                />
+                                <input
+                                    type="text"
+                                    name="Number"
+                                    placeholder="Digite el segundo valor"
+                                    id="numberTwo"
+                                />
+                                <button type="button" onclick="maxValue()">
+                                    Validar
+                                </button>
+                                <p>Resultado:</p>
+                            </form>
+                            <label id="maxResult"></label>
+                        </div>
+
+                        <div>
+                            <li>Vocales en la frase:</li>
+                            <form>
+                                <input
+                                    type="text"
+                                    name="Text"
+                                    placeholder="Digite la cadena a evaluar"
+                                    id="vowelsText"
+                                />
+                                <button type="button" onclick="vowels()">
+                                    Validar
+                                </button>
+                                <p>Resultado:</p>
+                            </form>
+                            <label id="vowelsResult"></label>
+                        </div>
+                        <li>Total de repeticiones de las vocales</li>
+                    </ol>
                 </div>
             </section>
         </main>
@@ -44,5 +103,6 @@
                 </p>
             </div>
         </section>
+        <script src="../js/app.js"></script>
     </body>
 </html>
