@@ -85,10 +85,6 @@ p {
     margin-bottom: 0.75rem;
     color: var(--clr-grey-9);
 }
-ul {
-    list-style-type: none;
-}
-
 ol {
     font-size: 1rem;
 };
@@ -97,6 +93,9 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
 
 .navbar {
     background: var(--clr-white);
@@ -153,9 +152,14 @@ a {
     padding: 4rem;
 }
 
-.inicio-ul {
-    text-align: start;
+.inicio h3 {
+    padding-bottom: 1rem;
+}
+
+.inicio li {
+    font-size: 2rem;
     max-width: 35rem;
+    padding: 1rem;
 }
  
 .inicioGitLink{
@@ -165,6 +169,22 @@ a {
 
 a:visited{
     color: var(--clr-primary-7);
+}
+
+.githubButton {
+    background: var(--clr-primary-5);
+    padding: 0.7rem;
+    font-size: 1rem;
+    letter-spacing: var(--spacing);
+    border: 2px solid transparent;
+    width: 200px;
+}
+
+.githubButton:hover {
+    background: transparent;
+    border-color: var(--clr-white);
+    color: var(--clr-white);
+    border: solid;
 }
 
 @media screen and (min-width: 600px) {
@@ -185,10 +205,52 @@ a:visited{
     justify-content: center;
     align-items: center;
 }
+.js input {
+    height: 30px;
+    width: 400px;
+    padding-right: 1rem;
+    background: var(--clr-primary-9);
+    border: none;
+}
+
+.js .inputNum {
+    width: 200px;
+}
+
+.js button {
+    background: var(--clr-primary-5);
+    margin-left: 0.5rem;
+
+    font-size: 1rem;
+    border: 2px solid transparent;
+    width: 70px;
+    height: 30px;
+
+}
+
+.js button:hover {
+    background: transparent;
+    color: var(--clr-white);
+    border-color: var(--clr-white);
+}
 
 .js h1 {
     text-transform: uppercase;
-    padding: 0 3rem;
+    padding-bottom: 1rem;
+}
+.card {
+    display: inline-block;
+    margin: 0.5rem;
+
+}
+.js li {
+    font-size: 1rem;
+}
+
+.js label {
+    height: 30px;
+    padding-top: 1rem;
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -197,6 +259,35 @@ a:visited{
             url("../images/kittyNvim.png") top/cover no-repeat;
     }
 }
+
+
+.ajax button {
+    background: var(--clr-primary-5);
+    font-size: 1rem;
+    border: 2px solid transparent;
+    width: 200px;
+    height: 30px;
+    margin: 1rem;
+
+}
+
+.ajax button:hover {
+    background: transparent;
+    color: var(--clr-white);
+    border-color: var(--clr-white);
+}
+
+.ajax h1 {
+    text-transform: uppercase;
+}
+
+.ajax p {
+    padding: 0.5rem;
+    width: 500px;
+    background: var(--clr-primary-9);
+    color: var(--clr-grey-1);
+}
+
 
 
 

@@ -13,10 +13,10 @@ function checkPalindrome(value) {
 
     for (let i = 0; i < len / 2; i++) {
         if (value[i] !== value[len - 1 - i]) {
-            return value + " --> No es palídrome";
+            return value + " - No es palídrome";
         }
     }
-    return value + " --> SI es palíndrome";
+    return value + " - SI es palíndrome";
 }
 
 function maxValue() {
